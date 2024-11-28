@@ -33,3 +33,9 @@ jobs:
       # Step 4: Run tests
       - name: Run tests
         run: pytest
+
+      # Step 5: Run Linter
+      - name: Run Linter
+        run: |
+          pip install flake8  # Ensure flake8 is installed
+          flake8 .  # Run flake8 on the entire project
